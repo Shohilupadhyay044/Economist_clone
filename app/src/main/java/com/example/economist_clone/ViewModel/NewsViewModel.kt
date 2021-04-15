@@ -22,18 +22,18 @@ class NewsViewModel(
     var searchNewsPage = "techcrunch"
 
     init {
-        getBreakingNews("us")
+        getBreakingNews()
     }
 
-    fun getBreakingNews(countryCode: String) = viewModelScope.launch {
+    fun getBreakingNews() = viewModelScope.launch {
         breakingNews.postValue(Resource.Loading())
-        val response = newsRepository.getBreakingNews(countryCode, breakingNewsPage.toString())
+        val response = newsRepository.getBreakingNews()
         breakingNews.postValue(handleBreakingNewsResponse(response))
     }
 
     fun searchNews(searchQuery: String) = viewModelScope.launch {
         searchNews.postValue(Resource.Loading())
-        val response = newsRepository.searchNews(searchQuery, searchNewsPage.toString())
+        val response = newsRepository.searchNews(searchQuery)
         searchNews.postValue(handleSearchNewsResponse(response))
     }
 
