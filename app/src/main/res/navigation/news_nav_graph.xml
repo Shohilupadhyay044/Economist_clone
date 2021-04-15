@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/weeklyNewsFragments"
-        android:name="com.example.economist_clone.Fragments.WeeklyNewsFragments"
+        android:name="com.example.economist_clone.weekly.WeeklyNewsFragments"
         android:label="WeeklyNewsFragments" />
     <fragment
         android:id="@+id/savedNewsFragments"
