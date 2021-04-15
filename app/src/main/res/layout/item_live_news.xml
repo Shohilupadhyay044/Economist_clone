@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        app:cardCornerRadius="15dp"
+        android:elevation="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="@drawable/rectangle_bg"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_gravity="center"
+            android:id="@+id/ivPlayButton"
+            android:src="@drawable/play_button"
+            android:layout_height="50dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="13sp"
+        android:id="@+id/tvTitle"
+        android:textColor="@android:color/black"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="13sp"
+        android:id="@+id/tvTime"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

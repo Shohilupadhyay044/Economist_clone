@@ -10,6 +10,9 @@
         <action
             android:id="@+id/action_todayNewsFragments_to_articleFragment2"
             app:destination="@id/articleFragment2" />
+        <action
+            android:id="@+id/action_todayNewsFragments_to_youtubePlayerSupportFragments"
+            app:destination="@id/youtubePlayerSupportFragments" />
     </fragment>
     <fragment
         android:id="@+id/weeklyNewsFragments"
@@ -46,5 +49,25 @@
     <fragment
         android:id="@+id/articleFragment2"
         android:name="com.example.economist_clone.Fragments.ArticleFragment"
-        android:label="ArticleFragment" />
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.example.economist_clone.models.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/youtubePlayerSupportFragments"
+        android:name="com.example.economist_clone.Fragments.YoutubePlayerSupportFragments"
+        android:label="YoutubePlayerSupportFragments" >
+        <action
+            android:id="@+id/action_youtubePlayerSupportFragments_to_recommendedNewsFragment"
+            app:destination="@id/recommendedNewsFragment" />
+        <argument
+            android:name="videodata"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendedNewsFragment"
+        android:name="com.example.economist_clone.Fragments.RecommendedNewsFragment"
+        android:label="RecommendedNewsFragment" />
 </navigation>

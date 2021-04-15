@@ -24,6 +24,14 @@ class TodayNewsFragments : Fragment(R.layout.fragment_today) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        livetv.setOnClickListener {
+
+            findNavController().navigate(
+                R.id.action_todayNewsFragments_to_youtubePlayerSupportFragments,
+            )
+        }
+
         viewModel = (activity as MainActivity).viewModel
         setupRecyclerView()
 
