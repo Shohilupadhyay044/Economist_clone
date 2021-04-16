@@ -46,7 +46,7 @@ class SettingsFragments : Fragment(R.layout.fragment_settings){
         }
        else {
             btnLogin.setOnClickListener {
-                val intent = Intent(activity, SignUpActivity::class.java)
+                val intent = Intent(activity, LoginActivity::class.java)
                 startActivity(intent)
             }
         }
