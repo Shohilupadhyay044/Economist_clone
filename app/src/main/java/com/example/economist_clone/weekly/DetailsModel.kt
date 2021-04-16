@@ -16,5 +16,8 @@ data class DetailsModel(
 	val id: Int? = null,
 
 	@field:SerializedName("title")
-	val title: String? = null
+	val title: String? = null,
+
+	@field:SerializedName("description")
+    val description: String? = null
 )

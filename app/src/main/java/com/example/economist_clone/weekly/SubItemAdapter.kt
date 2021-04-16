@@ -1,5 +1,6 @@
 package com.example.economist_clone.weekly
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,8 +25,15 @@ open class SubItemAdapter (val subItemList: List<DetailsModel>) :
         subItemViewHolder.tvSubItemTitle.setText(subItem.title)
         subItemViewHolder.tvDescription.text=subItem.author
         Glide.with(subItemViewHolder.img_sub_item).load(subItem.urlToImage).into(subItemViewHolder.img_sub_item)
-    }
 
+        subItemViewHolder.itemView.setOnClickListener {
+            val intent= Intent(subItemViewHolder.itemView.context,DescriptionActivity::class.java)
+            intent.putExtra("description",subItem.description)
+            intent.putExtra("pic",subItem.urlToImage)
+            intent.putExtra("title",subItem.title)
+            subItemViewHolder.itemView.context.startActivity(intent)
+        }
+    }
     override fun getItemCount(): Int {
         return subItemList.size
     }
