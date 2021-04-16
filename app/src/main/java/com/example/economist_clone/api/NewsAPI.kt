@@ -21,7 +21,7 @@ interface NewsAPI {
     @GET("api/searchnews")
     suspend fun searchForNews(
         @Query("q")
-        searchQuery: String,
+        searchQuery: String
 //        @Query("sources")
 //        pageNumber: String = "techcrunch",
 //        @Query("apiKey")
