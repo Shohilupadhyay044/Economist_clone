@@ -3,23 +3,23 @@
 
     <item android:id="@+id/todayNewsFragments"
         android:title="Today"
-        android:icon="@drawable/ic_sunny_day"/>
+        android:icon="@drawable/ic_baseline_wb_sunny_24"/>
 
     <item android:id="@+id/weeklyNewsFragments"
         android:title="Weekly"
-        android:icon="@drawable/ic_calendar"/>
+        android:icon="@drawable/bookmarks"/>
 
     <item android:id="@+id/savedNewsFragments"
         android:title="Saved"
-        android:icon="@drawable/ic_baseline_bookmark_border_24"/>
+        android:icon="@drawable/ic_baseline_amp_stories_24"/>
 
     <item android:id="@+id/searchNewsFragments"
         android:title="Search"
-        android:icon="@drawable/ic_open_seach"/>
+        android:icon="@drawable/ic_baseline_manage_search_24"/>
 
     <item android:id="@+id/settingsFragments"
         android:title="Settings"
-        android:icon="@drawable/ic_user"/>
+        android:icon="@drawable/ic_baseline_account_box_24"/>
 
 
 </menu>

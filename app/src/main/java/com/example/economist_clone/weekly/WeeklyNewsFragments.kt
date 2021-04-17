@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.economist_clone.R
 import kotlinx.android.synthetic.main.fragment_weekly.*
@@ -21,6 +22,10 @@ class WeeklyNewsFragments : Fragment(R.layout.fragment_weekly) {
         rv_item.layoutManager = layoutManager
 
         callViewModel()
+        BtnAlign.setOnClickListener {
+            val action=WeeklyNewsFragmentsDirections.actionGlobalSectionFragment()
+            findNavController().navigate(action)
+        }
     }
 
     private fun callViewModel() {

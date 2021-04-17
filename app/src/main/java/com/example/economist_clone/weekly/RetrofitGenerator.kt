@@ -10,7 +10,7 @@ class RetrofitGenerator {
         private val httpLoggingInterceptor =
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
         fun getInstance(): Retrofit {
-            return Retrofit.Builder().baseUrl("http://b7c4078b012f.ngrok.io/")
+            return Retrofit.Builder().baseUrl("http://84d9934cf93f.ngrok.io/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build())
                     .build()

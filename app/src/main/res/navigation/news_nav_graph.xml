@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/news_nav_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_nav_graph"
     app:startDestination="@id/todayNewsFragments">
 
     <fragment
@@ -52,4 +54,9 @@
         android:id="@+id/settingsFragments"
         android:name="com.example.economist_clone.Fragments.SettingsFragments"
         android:label="SettingsFragments" />
+    <dialog
+        android:id="@+id/sectionFragment"
+        android:name="com.example.economist_clone.SectionFragment"
+        android:label="fragment_section"
+        tools:layout="@layout/fragment_section" /><action android:id="@+id/action_global_sectionFragment" app:destination="@id/sectionFragment"/>
 </navigation>
