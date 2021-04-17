@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Economist_clone">
         <activity android:name=".weekly.DescriptionActivity"></activity>
+        <activity android:name=".RecomendedActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

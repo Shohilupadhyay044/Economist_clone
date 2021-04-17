@@ -10,53 +10,72 @@
         android:name="com.example.economist_clone.Fragments.TodayNewsFragments"
         android:label="TodayNewsFragments" >
         <action
-            android:id="@+id/action_todayNewsFragments_to_weeklyNewsFragments"
-            app:destination="@id/weeklyNewsFragments"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            android:id="@+id/action_todayNewsFragments_to_articleFragment2"
+            app:destination="@id/articleFragment2" />
         <action
-            android:id="@+id/action_todayNewsFragments_to_savedNewsFragments"
-            app:destination="@id/savedNewsFragments"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
-        <action
-            android:id="@+id/action_todayNewsFragments_to_searchNewsFragments"
-            app:destination="@id/searchNewsFragments"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
-        <action
-            android:id="@+id/action_todayNewsFragments_to_settingsFragments"
-            app:destination="@id/settingsFragments"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            android:id="@+id/action_todayNewsFragments_to_youtubePlayerSupportFragments"
+            app:destination="@id/youtubePlayerSupportFragments" />
     </fragment>
     <fragment
         android:id="@+id/weeklyNewsFragments"
-        android:name="com.example.economist_clone.weekly.WeeklyNewsFragments"
-        android:label="WeeklyNewsFragments" />
+        android:name="com.example.economist_clone.Fragments.WeeklyNewsFragments"
+        android:label="WeeklyNewsFragments" >
+        <action
+            android:id="@+id/action_weeklyNewsFragments_to_articleFragment2"
+            app:destination="@id/articleFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/savedNewsFragments"
         android:name="com.example.economist_clone.Fragments.SavedNewsFragments"
-        android:label="SavedNewsFragments" />
+        android:label="SavedNewsFragments" >
+        <action
+            android:id="@+id/action_savedNewsFragments_to_articleFragment2"
+            app:destination="@id/articleFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/searchNewsFragments"
         android:name="com.example.economist_clone.Fragments.SearchNewsFragments"
-        android:label="SearchNewsFragments" />
+        android:label="SearchNewsFragments" >
+        <action
+            android:id="@+id/action_searchNewsFragments_to_articleFragment2"
+            app:destination="@id/articleFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragments"
         android:name="com.example.economist_clone.Fragments.SettingsFragments"
-        android:label="SettingsFragments" />
+        android:label="SettingsFragments" >
+        <action
+            android:id="@+id/action_settingsFragments_to_articleFragment2"
+            app:destination="@id/articleFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment2"
+        android:name="com.example.economist_clone.Fragments.ArticleFragment"
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.example.economist_clone.models.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/youtubePlayerSupportFragments"
+        android:name="com.example.economist_clone.Fragments.YoutubePlayerSupportFragments"
+        android:label="YoutubePlayerSupportFragments" >
+        <action
+            android:id="@+id/action_youtubePlayerSupportFragments_to_recommendedNewsFragment"
+            app:destination="@id/recommendedNewsFragment" />
+        <argument
+            android:name="videodata"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendedNewsFragment"
+        android:name="com.example.economist_clone.Fragments.RecommendedNewsFragment"
+        android:label="RecommendedNewsFragment" />
+
     <dialog
         android:id="@+id/sectionFragment"
         android:name="com.example.economist_clone.SectionFragment"
         android:label="fragment_section"
-        tools:layout="@layout/fragment_section" /><action android:id="@+id/action_global_sectionFragment" app:destination="@id/sectionFragment"/>
+        tools:layout="@layout/fragment_section" />
+
 </navigation>
