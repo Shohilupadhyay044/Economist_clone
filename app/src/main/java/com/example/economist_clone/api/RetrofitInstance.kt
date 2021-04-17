@@ -16,7 +16,7 @@ class RetrofitInstance {
                 .addInterceptor(logging)
                 .build()
             Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl("http://192.168.29.160:8080")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
