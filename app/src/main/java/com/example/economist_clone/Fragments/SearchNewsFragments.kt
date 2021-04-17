@@ -28,10 +28,10 @@ class SearchNewsFragments:Fragment(R.layout.fragment_search) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        etSearch.setOnClickListener{
-
-            ivRandom.visibility = View.GONE
-        }
+//        etSearch.setOnClickListener{
+//
+////            ivRandom.visibility = View.GONE
+//        }
         viewModel = (activity as MainActivity).viewModel
         setupRecyclerView()
 

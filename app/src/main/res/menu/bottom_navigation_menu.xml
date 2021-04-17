@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/todayNewsFragments"
-        android:title="Today News"
-        android:icon="@drawable/ic_breaking_news"/>
+        android:title="Today"
+        android:icon="@drawable/ic_baseline_wb_sunny_24"/>
 
     <item android:id="@+id/weeklyNewsFragments"
-        android:title="Weekly News"
-        android:icon="@drawable/ic_breaking_news"/>
+        android:title="Weekly"
+        android:icon="@drawable/bookmarks"/>
 
     <item android:id="@+id/savedNewsFragments"
-        android:title="Today News"
-        android:icon="@drawable/ic_favorite"/>
+        android:title="Saved"
+        android:icon="@drawable/ic_baseline_amp_stories_24"/>
 
     <item android:id="@+id/searchNewsFragments"
-        android:title="Today News"
-        android:icon="@drawable/ic_baseline_search_24"/>
+        android:title="Search"
+        android:icon="@drawable/ic_baseline_manage_search_24"/>
 
     <item android:id="@+id/settingsFragments"
-        android:title="Today News"
-        android:icon="@drawable/ic_baseline_settings_24"/>
+        android:title="Settings"
+        android:icon="@drawable/ic_baseline_account_box_24"/>
 
 
 </menu>

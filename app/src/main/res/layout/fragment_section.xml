@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".SectionFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Section"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#FF0000"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RvSection"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       />
+
+</LinearLayout>

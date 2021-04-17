@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/news_nav_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_nav_graph"
     app:startDestination="@id/todayNewsFragments">
 
     <fragment
@@ -13,14 +15,6 @@
         <action
             android:id="@+id/action_todayNewsFragments_to_youtubePlayerSupportFragments"
             app:destination="@id/youtubePlayerSupportFragments" />
-    </fragment>
-    <fragment
-        android:id="@+id/weeklyNewsFragments"
-        android:name="com.example.economist_clone.Fragments.WeeklyNewsFragments"
-        android:label="WeeklyNewsFragments" >
-        <action
-            android:id="@+id/action_weeklyNewsFragments_to_articleFragment2"
-            app:destination="@id/articleFragment2" />
     </fragment>
     <fragment
         android:id="@+id/savedNewsFragments"
@@ -53,6 +47,9 @@
         <argument
             android:name="article"
             app:argType="com.example.economist_clone.models.Article" />
+        <action
+            android:id="@+id/action_articleFragment2_to_weeklyNewsFragments"
+            app:destination="@id/weeklyNewsFragments" />
     </fragment>
     <fragment
         android:id="@+id/youtubePlayerSupportFragments"
@@ -63,11 +60,25 @@
             app:destination="@id/recommendedNewsFragment" />
         <argument
             android:name="videodata"
-            app:argType="string"
-            android:defaultValue="default" />
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/recommendedNewsFragment"
         android:name="com.example.economist_clone.Fragments.RecommendedNewsFragment"
         android:label="RecommendedNewsFragment" />
+
+    <dialog
+        android:id="@+id/sectionFragment"
+        android:name="com.example.economist_clone.SectionFragment"
+        android:label="fragment_section"
+        tools:layout="@layout/fragment_section" />
+    <fragment
+        android:id="@+id/weeklyNewsFragments"
+        android:name="com.example.economist_clone.weekly.WeeklyNewsFragments"
+        android:label="WeeklyNewsFragments" >
+        <action
+            android:id="@+id/action_weeklyNewsFragments_to_sectionFragment"
+            app:destination="@id/sectionFragment" />
+    </fragment>
+
 </navigation>

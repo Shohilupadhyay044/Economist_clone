@@ -3,17 +3,23 @@ package com.example.economist_clone.Fragments
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.androiddevs.mvvmnewsapp.ui.NewsViewModel
 import com.example.economist_clone.Adapter.NewsAdapter
 import com.example.economist_clone.MainActivity
 import com.example.economist_clone.R
-import com.example.economist_clone.models.NewsResponse
+import com.example.economist_clone.database.ArticleDao
+import com.example.economist_clone.models.Article
 import com.example.economist_clone.util.Resource
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_today.*
+import java.util.*
 
 class TodayNewsFragments : Fragment(R.layout.fragment_today) {
 
@@ -25,10 +31,11 @@ class TodayNewsFragments : Fragment(R.layout.fragment_today) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         livetv.setOnClickListener {
 
             findNavController().navigate(
-                R.id.action_todayNewsFragments_to_youtubePlayerSupportFragments,
+                    R.id.action_todayNewsFragments_to_youtubePlayerSupportFragments,
             )
         }
 
@@ -40,14 +47,14 @@ class TodayNewsFragments : Fragment(R.layout.fragment_today) {
                 putSerializable("article", it)
             }
             findNavController().navigate(
-                R.id.action_todayNewsFragments_to_articleFragment2,
-                bundle
+                    R.id.action_todayNewsFragments_to_articleFragment2,
+                    bundle
             )
 
         }
 
         viewModel.breakingNews.observe(viewLifecycleOwner, Observer { response ->
-            when(response){
+            when (response) {
                 is Resource.Success -> {
                     hideProgressBar()
                     response.data?.let { newsResponse ->
@@ -82,7 +89,33 @@ class TodayNewsFragments : Fragment(R.layout.fragment_today) {
         rvBreakingNews.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
+
         }
-    }
-    }
+
+        val itemTouchHelperCallback = object : ItemTouchHelper.SimpleCallback(
+                ItemTouchHelper.UP or ItemTouchHelper.DOWN,
+                ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+        ) {
+            override fun onMove(
+                    recyclerView: RecyclerView,
+                    viewHolder: RecyclerView.ViewHolder,
+                    target: RecyclerView.ViewHolder
+            ): Boolean {
+                var fromPosition : Int = viewHolder.adapterPosition
+                var toPosition = target.adapterPosition
+
+
+                Collections.swap(newsAdapter.differ.currentList,fromPosition,toPosition)
+
+                rvBreakingNews.adapter?.notifyItemMoved(fromPosition,toPosition)
+
+                return true
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+
+                }
+            }
+        }
+}
 

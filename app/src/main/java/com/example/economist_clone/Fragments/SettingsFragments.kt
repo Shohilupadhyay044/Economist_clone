@@ -6,12 +6,19 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.example.economist_clone.R
+
+import java.util.*
+
 import com.example.economist_clone.firebase.LoginActivity
 import com.example.economist_clone.firebase.SignUpActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_settings.*
+
 
 class SettingsFragments : Fragment(R.layout.fragment_settings){
     var auth: FirebaseAuth? = null
