@@ -8,11 +8,11 @@ import com.example.economist_clone.models.Article
 class NewsRepository(
     val db: ArticleDatabase
 ) {
-    suspend fun getBreakingNews(countryCode: String, pageNumber: String) =
-        RetrofitInstance.api.getBreakingNews(countryCode, pageNumber)
+    suspend fun getBreakingNews() =
+        RetrofitInstance.api.getBreakingNews()
 
-    suspend fun searchNews(searchQuery: String, pageNumber: String) =
-        RetrofitInstance.api.searchForNews(searchQuery, pageNumber)
+    suspend fun searchNews(searchQuery: String) =
+        RetrofitInstance.api.searchForNews(searchQuery)
 
     suspend fun upsert(article: Article) = db.getArticleDao().upsert(article)
 

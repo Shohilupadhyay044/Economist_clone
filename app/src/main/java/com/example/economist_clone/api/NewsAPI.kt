@@ -8,23 +8,23 @@ import retrofit2.http.Query
 
 interface NewsAPI {
 
-    @GET("v2/top-headlines")
+    @GET("api/breakingnews")
     suspend fun getBreakingNews(
-        @Query("country")
-        countryCode: String = "us",
-        @Query("domains")
-        pageNumber : String ="wsj.com",
-        @Query("apiKey")
-        apiKey: String = API_KEY
+//        @Query("country")
+//        countryCode: String = "us",
+//        @Query("domains")
+//        pageNumber : String ="wsj.com",
+//        @Query("apiKey")
+//        apiKey: String = API_KEY
     ): Response<NewsResponse>
 
-    @GET("v2/everything")
+    @GET("api/searchnews")
     suspend fun searchForNews(
         @Query("q")
-        searchQuery: String,
-        @Query("sources")
-        pageNumber: String = "techcrunch",
-        @Query("apiKey")
-        apiKey: String = API_KEY
+        searchQuery: String
+//        @Query("sources")
+//        pageNumber: String = "techcrunch",
+//        @Query("apiKey")
+//        apiKey: String = API_KEY
     ): Response<NewsResponse>
 }

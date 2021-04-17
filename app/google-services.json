@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "617150758314",
+    "project_id": "economistclone-43cfd",
+    "storage_bucket": "economistclone-43cfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617150758314:android:2694efd1dab55aea5abfd3",
+        "android_client_info": {
+          "package_name": "com.example.economist_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617150758314-2u9pbk23nge7mpvnof646d3u46revemt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoJ5T_vu7NhuKjidaQODsQ-0Wgm8oSIBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617150758314-2u9pbk23nge7mpvnof646d3u46revemt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
