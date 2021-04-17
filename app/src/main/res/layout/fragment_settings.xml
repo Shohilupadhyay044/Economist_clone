@@ -47,6 +47,30 @@
            android:layout_alignParentEnd="true"
            android:layout_height="wrap_content"/>
    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/line_img"
+        android:layout_height="20dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Audio auto-download"
+            android:textSize="25sp"
+            android:layout_height="wrap_content"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/settings_img"
+        android:layout_height="400dp"/>
 
 
 
