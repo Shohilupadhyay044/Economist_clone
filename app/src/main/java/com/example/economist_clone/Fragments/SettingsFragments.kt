@@ -11,14 +11,14 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.economist_clone.R
-<<<<<<< HEAD
+
 import java.util.*
-=======
+
 import com.example.economist_clone.firebase.LoginActivity
 import com.example.economist_clone.firebase.SignUpActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_settings.*
->>>>>>> 7eb082bf82a1e269093a3e26578874ec551c46e8
+
 
 class SettingsFragments : Fragment(R.layout.fragment_settings){
     var auth: FirebaseAuth? = null

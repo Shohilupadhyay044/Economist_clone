@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class LoginActivity extends AppCompatActivity {
     private EditText mEtEmail,mEtPassword;
     private Button mBtnLogin;
@@ -32,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        firebaseAuth=FirebaseAuth.getInstance();
+        firebaseAuth= FirebaseAuth.getInstance();
         mEtEmail=findViewById(R.id.etEmailLogin);
         mEtPassword=findViewById(R.id.etPasswordLogin);
         mBtnLogin=findViewById(R.id.btnLogin);

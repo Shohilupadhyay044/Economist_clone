@@ -23,7 +23,7 @@ class WeeklyNewsFragments : Fragment(R.layout.fragment_weekly) {
 
         callViewModel()
         BtnAlign.setOnClickListener {
-            val action=WeeklyNewsFragmentsDirections.actionGlobalSectionFragment()
+            val action=WeeklyNewsFragmentsDirections.actionWeeklyNewsFragmentsToSectionFragment()
             findNavController().navigate(action)
         }
     }
