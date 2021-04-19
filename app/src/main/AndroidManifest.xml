@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.economist_clone">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -9,22 +10,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-<<<<<<< HEAD
-        android:theme="@style/Theme.Economist_clone">
-        <activity android:name=".weekly.DescriptionActivity"></activity>
-        <activity android:name=".RecomendedActivity"></activity>
-=======
         android:theme="@style/Theme.Economist_clone"
         android:usesCleartextTraffic="true">
-        <activity android:name=".firebase.LoginActivity" />
-        <activity android:name=".firebase.SignUpActivity" />
->>>>>>> 7eb082bf82a1e269093a3e26578874ec551c46e8
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".weekly.DescriptionActivity" />
+        <activity android:name=".firebase.LoginActivity" />
+        <activity android:name=".firebase.SignUpActivity" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 

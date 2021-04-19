@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#ED1616"
+    android:layout_height="match_parent"
+    tools:context="com.example.economist_clone.SplashScreen">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/splash_rect_bg"
+        android:layout_marginEnd="100dp"
+        android:layout_height="80dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The "
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tvThe"
+            android:layout_marginTop="5dp"
+            android:textSize="26dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Economist"
+            android:layout_below="@id/tvThe"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textSize="26dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?attr/progressBarStyle"
+        android:visibility="visible"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"/>
+</LinearLayout>
